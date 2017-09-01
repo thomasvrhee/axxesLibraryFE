@@ -11,6 +11,10 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
             templateUrl : './overview/overview.html',
             controller : 'overviewController'
         })
+        .when('/admin', {
+            templateUrl : './admin/add/addBook.html',
+            controller : 'addController'
+        })
         .when('/library-item/:id', {
             templateUrl : './detail/detail.html',
             controller : 'detailController'
