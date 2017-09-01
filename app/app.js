@@ -13,3 +13,5 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
         controller : 'overviewController'
     });
 }]);
+
+
