@@ -6,7 +6,7 @@ angular.module('myApp')
             method: 'GET',
             url: 'http://localhost:8080/bookDescriptions'
         }).then(function successCallback(response) {
-            console.log("Success")
+            console.log("Success");
             $scope.books = response.data._embedded.bookDescriptions;
 
         }, function errorCallback(response) {
