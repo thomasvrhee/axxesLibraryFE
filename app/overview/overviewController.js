@@ -4,10 +4,10 @@ angular.module('myApp')
         // Simple GET request example:
         $http({
             method: 'GET',
-            url: 'http://localhost:8080/bookdescriptions'
+            url: 'http://localhost:8080/bookDescriptions'
         }).then(function successCallback(response) {
             console.log("Success")
-            $scope.books = response;
+            $scope.books = response.data._embedded.bookDescriptions;
 
         }, function errorCallback(response) {
            console.log(response);
