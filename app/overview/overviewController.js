@@ -1,13 +1,15 @@
 angular.module('myApp')
     .controller('overviewController', function($scope, $http, $routeParams) {
        $scope.bookName = "";
+        // Simple GET request example:
+        $http({
+            method: 'GET',
+            url: 'http://localhost:8080/bookdescriptions'
+        }).then(function successCallback(response) {
+            console.log("Success")
+            $scope.books = response;
 
-       $scope.dummyList = [
-            {title: 'OCA Exam preparation', author:'bob', url: 'images/Book for Java SE 8 Certification.jpg'},
-            {title: 'Clean code', author:'bob', url: 'images/cleanCode.jpg'},
-            {title: 'dummy3', author:'bob', url: 'images/Book for Java SE 8 Certification.jpg'},
-            {title: 'dummy4', author:'bob', url: 'images/Book for Java SE 8 Certification.jpg'},
-            {title: 'dummy5', author:'bob', url: 'images/Book for Java SE 8 Certification.jpg'},
-            {title: 'dummy6', author:'bob', url: 'images/Book for Java SE 8 Certification.jpg'},
-        ]
+        }, function errorCallback(response) {
+           console.log(response);
+        });
 })
