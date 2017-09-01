@@ -18,6 +18,10 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
         .when('/library-item/:id', {
             templateUrl : './detail/detail.html',
             controller : 'detailController'
+        })
+        .when('/profile', {
+            templateUrl : './profile/profile.html',
+            controller : 'profileController'
         });
 }]);
 

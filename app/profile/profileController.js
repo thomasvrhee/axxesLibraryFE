@@ -1,6 +1,5 @@
 angular.module('myApp')
-    .controller('overviewController', function($scope, $http, $routeParams) {
-       $scope.bookName = '';
+    .controller('profileController', function($scope, $http, $routeParams) {
 
         $http({
             method: 'GET',
@@ -10,4 +9,4 @@ angular.module('myApp')
         }, function errorCallback(response) {
             console.log(response);
         });
-});
+    });

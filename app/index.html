@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
 <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
@@ -30,13 +36,19 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li style="margin-left: -40%;"><img style="margin-top: 15px;" src="images/logo.png"/></li>
-                <li><a ng-href="#/home">Home</a></li>
                 <li><a ng-href="#/">Overview</a></li>
                 <li><a ng-href="#/admin">Admin</a></li>
+                <li><a ng-href="#/profile">Profile</a></li>
             </ul>
         </div>
     </div>
 </nav>
+
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
 
 <div ng-view></div>
 
@@ -48,6 +60,9 @@
 </div>
 <hr/>
 
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
 
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 <link rel="stylesheet" href="style/cust.css">
@@ -60,6 +75,7 @@
 <script src="components/version/interpolate-filter.js"></script>
 <script src="overview/overviewController.js"></script>
 <script src="detail/detailController.js"></script>
+<script src="profile/profileController.js"></script>
 <script src="admin/add/addController.js"></script>
 
 
