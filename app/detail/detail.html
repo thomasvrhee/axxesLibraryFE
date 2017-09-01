@@ -14,7 +14,7 @@
             <h2>{{data.title}}</h2>
             <h5 ng-repeat="author in data.authors">{{author.firstname}} {{author.lastname}}</h5>
             <h5>Isbn: {{data.isbn}}</h5>
-            <span ng-repeat="tag in data.tags" class="label label-default">{{tag.name}}&nbsp;</span>
+            <span ng-repeat="tag in data.tags"><span class="label label-default">{{tag.name}}</span>&nbsp;</span>
             <br>
             <br>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
