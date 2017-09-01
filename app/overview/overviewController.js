@@ -1,6 +1,6 @@
 angular.module('myApp')
     .controller('overviewController', function($scope, $http, $routeParams) {
-        $scope.bookName = "";
+       $scope.bookName = "";
 
        $scope.dummyList = [
             {title: 'OCA Exam preparation', author:'bob', url: 'images/Book for Java SE 8 Certification.jpg'},
