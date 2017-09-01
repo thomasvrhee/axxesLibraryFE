@@ -8,8 +8,13 @@ angular.module('myApp', [
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-    $routeProvider.when('/', {
-        templateUrl : 'overview/overview.html',
-        controller : 'overviewController'
-    });
+    $routeProvider
+        .when('/', {
+            templateUrl : './overview/overview.html',
+            controller : 'overviewController'
+        })
+        .when('/library-item/:id', {
+            templateUrl : './detail/detail.html',
+            controller : 'detailController'
+        });
 }]);
