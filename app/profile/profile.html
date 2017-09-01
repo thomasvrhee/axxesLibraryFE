@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>My overview</h2>
+    <br>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>State</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="book in books">
+            <td>{{book.title}}</td>
+            <td>Loaned</td>
+            <td><a ng-href="/#/library-item/{{book.isbn}}">Go to detail »</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
