@@ -15,6 +15,11 @@
   content: "]";
 }
 
+.menu:hover {
+  pointer: click;
+}
+
+
 .menu > li {
   display: inline;
 }
