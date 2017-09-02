@@ -1,5 +1,5 @@
 angular.module('myApp')
-    .controller('addController', function($scope, $http, $routeParams) {
+    .controller('addController', function($scope, $http, $routeParams, $location) {
         $scope.bookDescription = {};
         $scope.bookTags = "";
         $scope.bookDescription.tags = [];
@@ -24,6 +24,7 @@ angular.module('myApp')
 
             $http(req).then(function(){
                 console.log('Safe Successfull');
+                $location.path('/')
                 },
                 function(){
                 console.log('Safe failed');
