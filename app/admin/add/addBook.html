@@ -8,7 +8,7 @@
 
         <div class="form-group">
             <label>Name of book:</label>
-            <input class="form-control" ng-model="bookDescription.book" id="bookName" placeholder="Name of the book"
+            <input class="form-control" ng-model="bookDescription.title" id="bookName" placeholder="Name of the book"
                    name="bookName">
         </div>
         <div class="form-group">
@@ -18,8 +18,18 @@
         </div>
 
         <div class="form-group">
-            <label>Author (sepperate by comma's):</label>
-            <input class="form-control" ng-model="authors" id="author" placeholder="Author" name="bookAuthor">
+
+            <label>Author:</label>
+            <div class="form-inline">
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <input class="form-control" ng-model="author.firstname"  style="width: 100%" placeholder="First name">
+                </div>
+                <div class="form-group col-md-6">
+                    <input class="form-control" ng-model="author.lastname"  style="width: 100%" placeholder="Last name">
+                </div>
+            </div>
+        </div>
         </div>
 
         <div class="form-group">
@@ -39,6 +49,6 @@
                    name="amountOfBooks">
         </div>
 
-        <input type="button" ng-click="saveBooks()" class="btn btn-default" name="Add book"/>
+        <button ng-click="saveBooks()" class="btn btn-primary" name="Add book">Add book</button>
     </form>
 </div>
