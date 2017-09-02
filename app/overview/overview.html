@@ -13,8 +13,8 @@
         <div ng-repeat="book in books | filter:bookName">
             <div style="width: 350px; height: 450px;" class="col-md-5">
                 <div class="thumbnail">
-                    <a ng-href="/#/library-item/{{book.isbn}}">
-                        <img style="width: 300px; height: 350px;" ng-src="{{book.url}}" alt="Lights" style="width:90%">
+                    <a ng-href="/#/library-item/{{book.id}}">
+                        <img style="width: 300px; height: 350px;" ng-src="{{book.url}}" alt="" style="width:90%">
                         <div class="caption">
                             <p class="alignCenter" style="font-weight: bold">{{book.title}}</p>
                         </div>
